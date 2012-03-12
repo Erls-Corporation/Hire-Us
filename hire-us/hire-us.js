@@ -11,17 +11,17 @@ var HireUs = {};
 	HireUs = {
 		overlayBG: document.createElement('div'),
 		promoText: 	"<h1>Hire Us</h1>" +
-					"<p>Do you need a freelance HTML5-er?  I've joined Daniel Christopher (my long-time go-to designer, and ColRD.com owner) along with Wess Willis of LucentPDX.  We create elegant web-apps and websites with a keen artistic sense; bringing your ideas to life!" +
-					"<p>I've had over 6-years of experience creating web-apps, and 12-years of developing websites.  My work has been featured in the Tel Aviv Museum of Modern Arts, Google IO, used in schools, and at times enjoyed being the most popular link on PopURLs, Delicious, Digg, and others. My specialties include Animations, Audio, Graphics. Creating intuitive applications that help people do $x, create $y, or learn $z is my job, and I love it!" +
-					"<p>Some examples of our work, and my solo-work include;" +
+					"<p class=\"hire-intro\">Do you need a freelance HTML5-er?  I've joined Daniel Christopher (my long-time go-to designer, and ColRD.com owner) along with Wess Willis of LucentPDX.  We create elegant web-apps and websites with a keen artistic sense; bringing your ideas to life!</p>" +
+					"<p>I've had over 6-years of experience creating web-apps, and 12-years of developing websites.  My work has been featured in the Tel Aviv Museum of Modern Arts, Google IO, used in schools, and at times enjoyed being the most popular link on PopURLs, Delicious, Digg, and others. My specialties include Animations, Audio, Graphics. Creating intuitive applications that help people do $x, create $y, or learn $z is my job, and I love it!</p>" +
+					"<h2>Some examples of our work include:</h2>" +
 					"<ul>" +
 						"<li><a href=\"http://colrd.com\">ColRD.com</a></li>" + 
-						"<li><a href=\"http://colrd.com\">PortlandiaFoods.com</li>" +
-						"<li>Sketchpad</li>" +
-						"<li><a href=\"http://mudcu.be\">Color Piano</a></li>" +
+						"<li><a href=\"http://portlandiafoods.com\">PortlandiaFoods.com</a></li>" +
+						"<li><a href=\"\">Sketchpad</a></li>" +
+						"<li><a href=\"http://mudcu.be/piano/\">Color Piano</a></li>" +
 						"<li><a href=\"http://colrd.com/create/gradient/\">Gradient Creator</a></li>" +
 					"</ul>" + 
-					"<a href=\"http://lucentpdx.com/contact/\">Contact LucentPDX with project inquires</a>",
+					"<a href=\"http://lucentpdx.com/contact/\" class=\"hire-button\"><span class=\"hire-button-inner\">Contact LucentPDX with project inquires</span></a>",
 		
 		init: function(placement) {
 			placement = (typeof placement !== 'undefined') ? placement : 'tl';
@@ -39,6 +39,8 @@ var HireUs = {};
 			content.setAttribute('id', 'hire-us-content');
 			content.innerHTML = this.promoText;
 			this.overlayBG.appendChild(content);
+			content.onclick = this.stopPropagation;
+
 
 			// initiate click event
 			link.onclick = this.toggleOverlay;
