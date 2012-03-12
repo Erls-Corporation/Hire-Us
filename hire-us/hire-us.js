@@ -33,17 +33,15 @@ var HireUs = {};
 			// insert foxybox
 			this.overlayBG.setAttribute('id', 'hire-us-bg');
 			document.body.appendChild(this.overlayBG);
-			this.overlayBG.onclick = this.toggleOverlay;
 			// insert content
 			var content = document.createElement('div');
 			content.setAttribute('id', 'hire-us-content');
 			content.innerHTML = this.promoText;
 			this.overlayBG.appendChild(content);
-			content.onclick = this.stopPropagation;
-
-
-			// initiate click event
+			// initiate click events
 			link.onclick = this.toggleOverlay;
+			content.onclick = this.stopPropagation;
+			this.overlayBG.onclick = this.toggleOverlay;
 		},
 		
 		toggleOverlay: function() {
