@@ -35,7 +35,7 @@
 
 #hire-us-bg {
 	background: #ccc;
-	background: rgba(220,220,220,.8);
+	background: rgba(200,200,200,.8);
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -55,7 +55,7 @@
 #hire-us-content {
 	cursor:default;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	line-height:1.3em;
+	line-height:1.5em;
 	padding: 60px;
 	margin-left:auto;
 	margin-right: auto;
@@ -70,9 +70,9 @@
 	border: 1px solid #aaa;
 	border-color: rgba(255,255,255,1);
 	box-shadow: 0 0 10px #777;
-	background-image: linear-gradient(top, #fff 0%, #eee 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));
-	background-image: -moz-linear-gradient(top,  #fff 0%, #eee 100%);
+	background-image: linear-gradient(top, #fff 0%, #e6e6e6 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #e6e6e6));
+	background-image: -moz-linear-gradient(top,  #fff 0%, #e6e6e6 100%);
 	text-shadow: 1px 1px 2px #fff;
 }
 
@@ -105,14 +105,14 @@
 }
 
 #hire-us-content p {
-	margin: 0 0 1.3em;
+	margin: 0 0 1.5em;
 }
 
 #hire-us-content .hire-intro {
 	font-size:1.1em;
 	font-style:italic;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	line-height:1.3em;
+	line-height:1.5em;
 }
 
 #hire-us-content * {
@@ -125,15 +125,19 @@
 	margin: 0 13%;
 	padding:0;
 	border: 3px solid transparent;
-	border-radius: 15px;
 	padding: 5px;
+	border-radius: 15px;
 	background: #ccc;
+	padding:3px;
 }
 
 #hire-us-content ul li {
 	list-style: none;
 	margin:0;
 	margin-bottom: -1px;
+	margin-right: -1px;
+	width: 50%;
+	float:left;
 }
 
 #hire-us-content ul li a {
@@ -144,18 +148,26 @@
 	height: 1em;
 	line-height:1em;
 	background: #fff;
-	background-image: linear-gradient(top, #fff 0%, #eee 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee));
-	background-image: -moz-linear-gradient(top,  #fff 0%, #eee 100%);
+	background-image: linear-gradient(top, #fff 0%, #f3f3f3 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #f3f3f3));
+	background-image: -moz-linear-gradient(top,  #fff 0%, #f3f3f3 100%);
 	text-decoration:none;
 }
 
 #hire-us-content ul li:first-child a {
-	border-radius: 10px 10px 0 0;
+	border-radius: 10px 0 0 0;
 }
 
-#hire-us-content ul li:last-child a {
-	border-radius: 0 0 10px 10px;
+#hire-us-content ul li:nth-child(2) a {
+	border-radius: 0 10px 0 0;
+}
+
+#hire-us-content ul li:nth-child(5) a {
+	border-radius: 0 0 0 10px;
+}
+
+#hire-us-content ul li:nth-child(6) a {
+	border-radius: 0 0 10px 0;
 }
 
 #hire-us-content ul li a:HOVER {
@@ -180,7 +192,7 @@
 	border-radius: 60px;
 	color: #fff;
 	text-shadow: 1px 1px 2px #a92700;
-	margin-top:1.3em;
+	margin-top:1.5em;
 	text-decoration:none;
 }
 
@@ -198,6 +210,7 @@
 	text-shadow: 1px 1px 1px #004b81;
 	background-color: #007bb1;
 	background-image: none;
+	box-shadow: 0 0 20px #fff;
 }
 
 #hire-us-content .hire-button:active {
@@ -206,4 +219,9 @@
 	text-shadow: none;
 	background-color: #e5005d;
 	background-image: none;	
+}
+
+#hire-us-content .hire-clear {
+	clear:both;
+
 }

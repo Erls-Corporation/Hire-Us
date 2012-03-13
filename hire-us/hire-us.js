@@ -20,7 +20,8 @@ var HireUs = {};
 						"<li><a href=\"\">Sketchpad</a></li>" +
 						"<li><a href=\"http://mudcu.be/piano/\">Color Piano</a></li>" +
 						"<li><a href=\"http://colrd.com/create/gradient/\">Gradient Creator</a></li>" +
-					"</ul>" + 
+						"<li><a href=\"http://www.voiceboxpdx.com/\">Voicebox Karaoke</a></li>" +
+					"<br class=\"hire-clear\"></ul>" + 
 					"<a href=\"http://lucentpdx.com/contact/\" class=\"hire-button\"><span class=\"hire-button-inner\">Contact LucentPDX With Project Inquires</span></a>",
 		
 		init: function(placement) {
