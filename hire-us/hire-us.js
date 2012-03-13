@@ -9,10 +9,9 @@ var HireUs = {};
 (function() { "use strict";
 	
 	HireUs = {
-		overlayBG: document.createElement('div'),
 		promoText: 	"<h1>Hire Us</h1>" +
 					"<p class=\"hire-intro\">Do you need a freelance HTML5-er?  I've joined Daniel Christopher (my long-time go-to designer, and ColRD.com owner) along with Wess Willis of LucentPDX.  We create elegant web-apps and websites with a keen artistic sense; bringing your ideas to life!</p>" +
-					"<p>My work has been featured in the Tel Aviv Museum of Modern Arts, Google IO, used in schools, and at times enjoyed being the most popular link on PopURLs, Delicious, Digg, and others. Specialties include Animations, Audio, Graphics. Creating intuitive applications that help people do $x, create $y, or learn $z is my job, and I love it!</p>" +
+					"<p>My work has been featured in the Tel Aviv Museum of Modern Arts, Google IO, used in schools, and enjoyed being the most popular link on PopURLs, Delicious, Digg, and others. Specialties include Animations, Audio, Graphics. Creating intuitive applications that help people do $x, create $y, or learn $z is my job, and I love it!</p>" +
 					"<h2>Examples of our work include:</h2>" +
 					"<ul>" +
 						"<li><a href=\"http://colrd.com\">ColRD.com</a></li>" + 
@@ -32,24 +31,24 @@ var HireUs = {};
 			link.setAttribute('class', placement);
 			document.body.appendChild(link);
 			// insert foxybox
-			this.overlayBG.setAttribute('id', 'hire-us-bg');
-			document.body.appendChild(this.overlayBG);
+			var overlayBG = document.createElement('div');
+			overlayBG.setAttribute('id', 'hire-us-bg');
+			document.body.appendChild(overlayBG);
 			// insert content
 			var content = document.createElement('div');
 			content.setAttribute('id', 'hire-us-content');
 			content.innerHTML = this.promoText;
-			this.overlayBG.appendChild(content);
+			overlayBG.appendChild(content);
 			// initiate click events
 			link.onclick = this.toggleOverlay;
 			content.onclick = this.stopPropagation;
-			this.overlayBG.onclick = this.toggleOverlay;
+			overlayBG.onclick = this.toggleOverlay;
 		},
 		
 		toggleOverlay: function() {
 			var bg = document.getElementById('hire-us-bg'),
 				current = bg.className;
-
-			bg.className = current === 'visible' ? '' : 'visible';
+			bg.className = (current === 'visible') ? '' : 'visible';
 		},
 
 		stopPropagation: function(event) {
