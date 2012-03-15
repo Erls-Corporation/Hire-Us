@@ -10,18 +10,18 @@ var HireUs = {};
 	
 	HireUs = {
 		promoText: 	"<h1>Hire Us</h1>" +
-					"<p class=\"hire-intro\">Do you need a freelance HTML5-er?  I've joined Daniel Christopher (my long-time go-to designer, and ColRD.com owner) along with Wess Willis of LucentPDX.  We create elegant web-apps and websites with a keen artistic sense; bringing your ideas to life!</p>" +
-					"<p>My work has been featured in the Tel Aviv Museum of Modern Arts, Google IO, used in schools, and enjoyed being the most popular link on PopURLs, Delicious, Digg, and others. Specialties include Animations, Audio, Graphics. Creating intuitive applications that help people do $x, create $y, or learn $z is my job, and I love it!</p>" +
+					"<p class=\"hire-intro\">Do you need a freelance HTML5 developer? We create elegant web-apps and websites with a keen artistic sense; bringing your ideas to life!</p>" +
+					"<p>Our work has been featured in the Tel Aviv Museum of Modern Arts, Google IO, used in schools, and enjoyed being the most popular link on PopURLs, Delicious, Digg, and others. Creating intuitive applications is our job, and we love it!</p>" +
 					"<h2>Examples of our work include:</h2>" +
 					"<ul>" +
 						"<li><a href=\"http://colrd.com\">ColRD.com</a></li>" + 
 						"<li><a href=\"http://portlandiafoods.com\">PortlandiaFoods.com</a></li>" +
-						"<li><a href=\"\">Sketchpad</a></li>" +
+						"<li><a href=\"http://mudcu.be/sketchpad/\">Sketchpad</a></li>" +
 						"<li><a href=\"http://mudcu.be/piano/\">Color Piano</a></li>" +
 						"<li><a href=\"http://colrd.com/create/gradient/\">Gradient Creator</a></li>" +
 						"<li><a href=\"http://www.voiceboxpdx.com/\">Voicebox Karaoke</a></li>" +
-					"<br class=\"hire-clear\"></ul>" + 
-					"<a href=\"http://lucentpdx.com/contact/\" class=\"hire-button\"><span class=\"hire-button-inner\">Contact LucentPDX With Project Inquires</span></a>",
+					"<br class=\"hire-clear\"></ul>" +
+					"<a href=\"mailto:connect@whatislucent.com\" class=\"hire-contact\"><span class=\"hire-inner\"></span></a>",
 		
 		init: function(placement) {
 			placement = (typeof placement !== 'undefined') ? placement : 'tl';

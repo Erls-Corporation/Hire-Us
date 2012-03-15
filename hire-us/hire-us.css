@@ -55,18 +55,16 @@
 #hire-us-content {
 	cursor:default;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	line-height:1.5em;
-	padding: 70px;
+	line-height:1.4em;
 	margin-left:auto;
 	margin-right: auto;
-	width: 60%;
+	width: 70%;
 	height:auto;
-	max-width: 520px;
+	max-width: 650px;
 	overflow-y: auto;
 	background: #fff;
-	margin-top:30px;
 	margin-bottom:5%;
-	border-radius: 10px;
+	border-radius: 0 0 10px 10px;
 	border: 1px solid #aaa;
 	border-color: rgba(255,255,255,1);
 	box-shadow: 0 0 10px #777;
@@ -83,16 +81,19 @@
 	font-size: 3em;
 	margin-top:0;
 	line-height:1em;
-	margin-bottom: .5em;
+	margin-bottom: .4em;
 	text-indent: -5000em;
 	height:180px;
-	margin-top:-70px;
 }
 
 #hire-us-content h2 {
-	font-size:1.5em;
+	font-size:1.4em;
 	font-weight: bold;
-	margin: 0 0 .87em;
+	margin: 1.2em 70px .5em;
+	background-image: url("examples.png");
+	background-repeat: no-repeat;
+	height:30px;
+	text-indent: -5000em;
 }
 
 #hire-us-content a:link {
@@ -105,14 +106,15 @@
 }
 
 #hire-us-content p {
-	margin: 0 0 1.5em;
+	margin: 0 70px 1em;
+
 }
 
 #hire-us-content .hire-intro {
 	font-size:1.1em;
 	font-style:italic;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	line-height:1.5em;
+	line-height:1.4em;
 }
 
 #hire-us-content * {
@@ -122,13 +124,8 @@
 }
 
 #hire-us-content ul {
-	margin: 0 5%;
+	margin: 0;
 	padding:0;
-	border: 3px solid transparent;
-	padding: 5px;
-	border-radius: 15px;
-	background: #ccc;
-	padding:3px;
 }
 
 #hire-us-content ul li {
@@ -145,7 +142,7 @@
 #hire-us-content ul li a {
 	position: relative;
 	display: block;
-	padding: .75em;
+	padding: 1em 1.5em;
 	border: 1px solid #ccc;
 	height: 1em;
 	line-height:1em;
@@ -156,20 +153,13 @@
 	text-decoration:none;
 }
 
-#hire-us-content ul li:first-child a {
-	border-radius: 10px 0 0 0;
+#hire-us-content ul li:nth-child(odd) a {
+	padding-left: 70px;
+	border-left: 0;
 }
 
-#hire-us-content ul li:nth-child(2) a {
-	border-radius: 0 10px 0 0;
-}
-
-#hire-us-content ul li:nth-child(5) a {
-	border-radius: 0 0 0 10px;
-}
-
-#hire-us-content ul li:nth-child(6) a {
-	border-radius: 0 0 10px 0;
+#hire-us-content ul li:nth-child(even) a {
+	border-right: 0;
 }
 
 #hire-us-content ul li a:HOVER {
@@ -194,7 +184,7 @@
 	border-radius: 60px;
 	color: #fff;
 	text-shadow: 1px 1px 2px #a92700;
-	margin-top:1.5em;
+	margin-top:1.4em;
 	text-decoration:none;
 }
 
@@ -225,5 +215,59 @@
 
 #hire-us-content .hire-clear {
 	clear:both;
+	line-height: 0;
+	height: 0;
+}
+
+#hire-us-content .hire-contact {
+	display:block;
+	background: #d86600;
+	background-image: linear-gradient(top, #dc7100 0%, #d25a00 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #dc7100), color-stop(1, #d25a00));
+	background-image: -moz-linear-gradient(top,  #dc7100 0%, #d25a00 100%);
+	padding: 30px 0;
+	border-top: 1px solid #fff;
+}
+
+#hire-us-content .hire-contact:HOVER {
+	background: #dc7100;
+	background-image: linear-gradient(top, #Ec8100 0%, #E26B00 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #Ec8100), color-stop(1, #E26a00));
+	background-image: -moz-linear-gradient(top,  #Ec8100 0%, #E26a00 100%);
+}
+
+#hire-us-content .hire-contact .hire-inner {
+	display: block;
+	background-image: url("email.png");
+	background-repeat: no-repeat;
+	background-size: 80%;
+	height: 70px;
+	background-position: center center;
+}
+
+/* MOBILE UI */
+@media screen and (max-width: 700px) {
+	#hire-us-content {
+		width: 80%;
+	}
+	#hire-us-content h2 { margin-left: 6%; margin-right: 6%; }
+	#hire-us-content p { margin-left: 6%; margin-right: 6%;}
+	#hire-us-content .hire-contact { padding-top: 15px; }
+	#hire-us-content .hire-contact .hire-inner {
+		background-size: 90%;
+	}
+	#hire-us-content ul li:nth-child(odd) a { padding-left: 12%; }
+}
+
+@media screen and (max-width: 520px) {
+	#hire-us-content { margin-top: 45px; }
+	#hire-us-content h2 {
+		background-size: 100%;
+	}
+	#hire-us-content .hire-clear {
+		display:none;
+	}
+	#hire-us-content ul li { float:none; width: 100%; }
+	#hire-us-content ul li a { float:none; padding-left: 6% !important; border-left: 0; border-right: 0; }
 
 }
