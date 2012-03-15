@@ -1,11 +1,11 @@
 #hire-us-link {
 	position: fixed;
 	width: 120px;
-	height: 107px;
+	height: 120px;
 	background-color: transparent;
 	background-image: url('Hire-Us-Button.png');
 	background-repeat:no-repeat;
-	z-index:10000;
+	z-index:10015;
 	cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
 	height: 100%;
 	position: fixed;
 	left: fixed;
-	z-index: 10001;
+	z-index: 10016;
 	left: 0;
 	top: 0;
 	display: none;
@@ -53,6 +53,7 @@
 }
 
 #hire-us-content {
+	font-size: 1.2em;
 	cursor:default;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height:1.4em;
@@ -63,7 +64,7 @@
 	max-width: 650px;
 	overflow-y: auto;
 	background: #fff;
-	margin-bottom:5%;
+	margin-bottom:60px;
 	border-radius: 0 0 10px 10px;
 	border: 1px solid #aaa;
 	border-color: rgba(255,255,255,1);
@@ -83,7 +84,8 @@
 	line-height:1em;
 	margin-bottom: .4em;
 	text-indent: -5000em;
-	height:180px;
+	height:171px !important;
+	float: none !important;
 }
 
 #hire-us-content h2 {
@@ -106,15 +108,16 @@
 }
 
 #hire-us-content p {
+	font-size:inherit;
 	margin: 0 70px 1em;
 
 }
 
 #hire-us-content .hire-intro {
-	font-size:1.1em;
+	font-size:1.2em;
 	font-style:italic;
 	font-family: Georgia, "Times New Roman", Times, serif;
-	line-height:1.4em;
+	line-height:1.3em;
 }
 
 #hire-us-content * {
@@ -240,9 +243,14 @@
 	display: block;
 	background-image: url("email.png");
 	background-repeat: no-repeat;
-	background-size: 80%;
 	height: 70px;
 	background-position: center center;
+}
+
+@media screen and (max-width: 800px) {
+	#hire-us-content .hire-contact .hire-inner {
+		background-size: 90%;
+	}
 }
 
 /* MOBILE UI */
@@ -253,9 +261,6 @@
 	#hire-us-content h2 { margin-left: 6%; margin-right: 6%; }
 	#hire-us-content p { margin-left: 6%; margin-right: 6%;}
 	#hire-us-content .hire-contact { padding-top: 15px; }
-	#hire-us-content .hire-contact .hire-inner {
-		background-size: 90%;
-	}
 	#hire-us-content ul li:nth-child(odd) a { padding-left: 12%; }
 }
 
