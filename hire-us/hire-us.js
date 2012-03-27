@@ -24,6 +24,13 @@ var HireUs = {};
 					"<a href=\"mailto:connect@whatislucent.com\" class=\"hire-contact\"><span class=\"hire-inner\"></span></a>",
 		
 		init: function(placement) {
+			var head = document.getElementsByTagName("head")[0];
+			var css = document.createElement("link");
+			css.rel = "stylesheet";
+			css.type = "text/css";
+			css.media = "screen";
+			css.href = "/media/hire-us/hire-us.css";
+			head.appendChild(css);
 			placement = (typeof placement !== 'undefined') ? placement : 'tl';
 			// insert link into page
 			var link = document.createElement('a');
@@ -58,7 +65,19 @@ var HireUs = {};
 				event.cancelBubble = true;
 			}
 			return root;
+		},
+		
+		boot: function() {
+			HireUs.init('tr');
 		}
 	}
 
 })();
+
+if (typeof window.addEventListener != 'undefined') {
+    window.addEventListener('load', HireUs.boot, false);
+} else if(typeof document.addEventListener != 'undefined') {
+    document.addEventListener('load', HireUs.boot, false);
+} else if(typeof window.attachEvent != 'undefined') {
+    window.attachEvent('onload', HireUs.boot);
+}
